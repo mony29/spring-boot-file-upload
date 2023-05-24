@@ -17,7 +17,6 @@ public class FileController {
     public FileController(FileService fileService) {
         this.fileService = fileService;
     }
-
     @PostMapping(value = "/file", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<?> uploadFile(@RequestParam("file")MultipartFile file) throws IOException {
         var response = new FileResponse<>();
